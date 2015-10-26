@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email         = %w[xianghuzhao@gmail.com]
   s.homepage      = 'http://rubygems.org/gems/freeze'
 
-  s.files         = %w[CHANGELOG.md LICENSE.md README.md]
+  s.files         = %w[CHANGELOG.md CONTRIBUTING.md LICENSE README.md]
   s.files         += Dir.glob('lib/**/*.rb')
   s.files         += Dir.glob('bin/**/*')
 
