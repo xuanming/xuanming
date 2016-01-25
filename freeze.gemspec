@@ -16,4 +16,8 @@ Gem::Specification.new do |s|
   s.files         += Dir.glob('bin/**/*')
 
   s.executable    = 'freeze'
+
+  s.add_development_dependency "bundler", "~> 1.10"
+  s.add_development_dependency "rake", "~> 10.0"
+  s.add_development_dependency "rspec"
 end

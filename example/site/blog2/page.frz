@@ -1,0 +1,8 @@
+Content:
+  Type: blog
+  RootPath: /blog2
+  Source:
+    Dir: blog2
+    Structure: "%{year}-%{month}-%{day}"
+    Extension: [html, erb, md, markdown, slim]
+  Theme: blog-bootstrap

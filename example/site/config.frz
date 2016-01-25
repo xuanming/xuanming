@@ -1,0 +1,24 @@
+Data:
+  Type: rest
+  Source:
+    Url: http://example.com/main-data
+
+Content:
+  Type: direct      # common option
+  RootPath: /       # common option
+  Source:
+    Dir: page
+    Extension: [html, erb, md, markdown, slim]
+  Surface:
+    Dir: surface
+    Javascript: js
+    Stylesheet: css
+    Image: image
+  Theme: direct-bootstrap
+
+SubSite:
+  - main
+  - sub
+  - blog
+  - blog2
+  - manual

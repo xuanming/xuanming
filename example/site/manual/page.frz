@@ -1,0 +1,12 @@
+Data:
+  Type: rest
+  Source:
+  Url: http://example.com/main-data
+
+Content:
+  Type:
+    name: book
+  RootPath: /manual
+  Source:
+    Dir: manual     # toc data and cover will also be in this directory
+  Theme: book-bootstrap

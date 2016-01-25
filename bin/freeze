@@ -2,4 +2,15 @@
 
 require 'freeze'
 
-Freeze.hi
+p 111
+Freeze::Builder::build
+
+p 222
+a = Freeze::DirectData.new
+p 333
+a.analyze
+p 444
+a.each do |aa|
+  p 555
+  p aa
+end

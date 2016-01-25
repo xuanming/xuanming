@@ -1,0 +1,26 @@
+Extension:
+  freeze-direct: {}
+  freeze-book:
+    From: file-system
+    Uri: ../site/freeze-book
+  freeze-blog:
+    From: git
+    Uri: https://github.com/xxx/freeze-blog.git
+    Tag: v1.0.3
+
+Data:
+  Type: yaml
+  Source:
+    Dir: data
+
+Source:
+  Dir: site
+
+Surface:
+  Dir: surface
+
+Lib:
+  Dir: lib
+
+Build:
+  Dir: build
