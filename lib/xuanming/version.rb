@@ -1,5 +1,4 @@
-module Freeze
-  # Freeze version
+module Xuanming
   VERSION_MAJOR = 0
   VERSION_MINOR = 0
   VERSION_BUILD = 0

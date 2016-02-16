@@ -1,4 +1,4 @@
-module Freeze
+module Xuanming
   class DirectData < Data
     DefaultConfig = {
       'Dir' => 'source',

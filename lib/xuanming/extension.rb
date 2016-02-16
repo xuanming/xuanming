@@ -1,4 +1,4 @@
-module Freeze
+module Xuanming
   class Extension
     def load
     end

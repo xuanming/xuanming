@@ -1,6 +1,6 @@
 require 'yaml'
 
-module Freeze
+module Xuanming
   class Configuration
     @@config = {}
 

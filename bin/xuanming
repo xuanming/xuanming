@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
-require 'freeze'
+require 'xuanming'
 
 p 111
-Freeze::Builder::build
+Xuanming::Builder::build
 
 p 222
-a = Freeze::DirectData.new
+a = Xuanming::DirectData.new
 p 333
 a.analyze
 p 444

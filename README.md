@@ -1,5 +1,5 @@
 # License
 
-Freeze is released under the MIT license:
+Xuanming is released under the MIT license:
 
 * <http://www.opensource.org/licenses/MIT>
