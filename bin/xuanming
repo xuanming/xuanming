@@ -2,15 +2,6 @@
 
 require 'xuanming'
 
-p 111
-Xuanming::Builder::build
+#Xuanming::Builder::build
 
-p 222
-a = Xuanming::DirectData.new
-p 333
-a.analyze
-p 444
-a.each do |aa|
-  p 555
-  p aa
-end
+app = Xuanming::Application.new

@@ -1,11 +1,7 @@
 module Xuanming
   class Builder
-    class << self
-      def build
-        config = Configuration::config
-#        Transformer::transform
-        puts config
-      end
+    def build
+      p @config
     end
   end
 end
