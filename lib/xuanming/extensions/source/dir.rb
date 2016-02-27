@@ -1,7 +1,6 @@
 module Xuanming
   module Sources
-
-    class Dir < Source
+    class Dir
       DefaultConfig = {
         'Dir' => 'source',
         'Extension' => ['md', 'erb'],
@@ -29,6 +28,5 @@ module Xuanming
         end
       end
     end
-
   end
 end

@@ -6,30 +6,31 @@ module Xuanming
     attr_accessor :dep_chain
 
     def initialize
+    end
+
+    def run(args)
       find_app_config
       puts "app root #{@app_root}"
       puts "config file: #{@config_file}"
+
+      load_config
+      load_extension
+      execute_command(args)
     end
+
 
     def load_config
     end
 
     def load_extension
+      Extension.auto_require File.expand_path('../extensions', __FILE__)
     end
 
-    def execute_command
+    def execute_command(args)
+      cmd = Extension.load_extension(Command, args[0])
+      cmd.execute
     end
 
-
-    def prepare_source
-    end
-
-    def weave
-      # call site controller
-    end
-
-    def build_dep_chain
-    end
 
     private
 
@@ -45,8 +46,8 @@ module Xuanming
         search_dir = new_search_dir
       end
 
-      @config_file = config_abs_path
       @app_root = search_dir
+      @config_file = config_abs_path
     end
   end
 end
