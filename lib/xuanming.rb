@@ -1,15 +1,26 @@
 require 'xuanming/application'
 require 'xuanming/configuration'
 require 'xuanming/extension'
-require 'xuanming/process'
 require 'xuanming/builder'
-require 'xuanming/data'
+require 'xuanming/element'
+require 'xuanming/element_collection'
+require 'xuanming/element_manager'
 require 'xuanming/version'
-
-#require 'xuanming/extensions/direct'
-#require 'xuanming/extensions/command/builder'
-
+require 'xuanming/process'
 
 module Xuanming
 #  Configuration::load_config
+  module Extensions
+    module Command
+    end
+
+    module Main
+    end
+
+    module Source
+    end
+
+    module Element
+    end
+  end
 end

@@ -1,15 +1,16 @@
 module Xuanming
-  module Command
-    class Builder
-      def execute
-        puts 'in builder execute...'
+  module Extensions
+    module Command
 
-        process = ::Xuanming::Process.new
+      class Builder
+        def execute(args, config)
+          puts 'in builder execute...'
 
-        process.prepare_source
-        process.weave
-        process.build_dep_chain
+          builder = Xuanming::Builder.new(config)
+          builder.build
+        end
       end
+
     end
   end
 end

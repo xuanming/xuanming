@@ -24,8 +24,9 @@ module Xuanming
       end
 
       def load_extension(ext_module, ext_name)
-        ext_module.const_get(minus_to_camelcase(ext_name)).new
+        ext_module.const_get(minus_to_camelcase(ext_name))
       end
+
 
       private
 

@@ -5,4 +5,5 @@ require 'xuanming'
 #Xuanming::Builder::build
 
 app = Xuanming::Application.new
-app.run ARGV
+app.prepare
+app.run_command ARGV
