@@ -1,3 +1,4 @@
+require 'xuanming/dag'
 require 'xuanming/application'
 require 'xuanming/configuration'
 require 'xuanming/extension'

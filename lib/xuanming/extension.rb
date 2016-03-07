@@ -8,7 +8,7 @@ module Xuanming
       end
 
       def auto_require(ext_dir)
-        $:.push File.expand_path(ext_dir)
+        $: << File.expand_path(ext_dir)
         Dir.glob(File.join(ext_dir, '**', '*.rb')) do |filename|
           f = Pathname.new(filename).relative_path_from(Pathname.new(ext_dir)).to_s
           require f

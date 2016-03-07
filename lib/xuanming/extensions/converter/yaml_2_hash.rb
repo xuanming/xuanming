@@ -8,7 +8,7 @@ module Xuanming
           input_location == 'file' && output_location == 'memory'
         end
 
-        def convert(input)
+        def convert(input, helper)
         end
       end
 
