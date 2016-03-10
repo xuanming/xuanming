@@ -8,8 +8,8 @@ module Xuanming
       @name = name
     end
 
-    def add(index, element)
-      @collection[index] = element
+    def add(element)
+      @collection[element.id] = element
     end
   end
 end

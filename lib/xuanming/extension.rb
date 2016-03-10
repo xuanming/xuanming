@@ -8,7 +8,7 @@ module Xuanming
       end
 
       def auto_require(ext_dir)
-        $: << File.expand_path(ext_dir)
+        $LOAD_PATH << File.expand_path(ext_dir)
         Dir.glob(File.join(ext_dir, '**', '*.rb')) do |filename|
           f = Pathname.new(filename).relative_path_from(Pathname.new(ext_dir)).to_s
           require f
@@ -16,11 +16,11 @@ module Xuanming
       end
 
       def all_descendants(parent)
-				ObjectSpace.each_object(::Class).select { |klass| klass < parent }
+				ObjectSpace.each_object(Class).select { |klass| klass < parent }
       end
 
       def all_extensions(ext_module)
-				ext_module.constants.select {|c| ext_module.const_get(c).is_a? ::Class}
+				ext_module.constants.select {|c| ext_module.const_get(c).is_a? Class}
       end
 
       def load_extension(ext_module, ext_name)

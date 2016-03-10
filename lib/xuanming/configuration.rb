@@ -38,7 +38,9 @@ module Xuanming
         break if File.file? abs_path
 
         new_search_dir = File.absolute_path(File.join(search_dir, '..'))
-        raise "App main file #{DEFAULT_MAIN_NAME} not found" if new_search_dir == search_dir
+        if new_search_dir == search_dir
+          raise RuntimeError, "App main file #{DEFAULT_MAIN_NAME} not found"
+        end
 
         search_dir = new_search_dir
       end

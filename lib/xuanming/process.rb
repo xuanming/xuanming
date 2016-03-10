@@ -7,12 +7,12 @@ module Xuanming
     end
 
     def prepare_source
-      @config.source.each do |source_name, c|
+      @config.source.each do |group, c|
         source_type   = c[:type]
         source_option = c[:option]
 
         source_class = Extension.load_extension(Extensions::Source, source_type)
-        source = source_class.new(source_name, source_option, @config.env)
+        source = source_class.new(group, source_option, @config.env)
 
         @em.add source.collect
       end

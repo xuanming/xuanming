@@ -17,6 +17,7 @@ module Xuanming
       execute_command(args[0], args[1..-1])
     end
 
+    private
 
     def load_extension
       Extension.auto_require File.expand_path('../extensions', __FILE__)

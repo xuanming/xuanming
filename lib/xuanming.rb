@@ -10,7 +10,6 @@ require 'xuanming/version'
 require 'xuanming/process'
 
 module Xuanming
-#  Configuration::load_config
   module Extensions
     module Command
     end
