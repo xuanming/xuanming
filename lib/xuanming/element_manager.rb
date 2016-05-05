@@ -1,16 +1,23 @@
+require 'xuanming/logger'
+
 module Xuanming
   class ElementManager
     def initialize
-      @collections = {}
+      @groups = {}
     end
 
-    def add(element_collection)
-      name = element_collection.name
-      @collections[name] = element_collection
+    def add(element_group)
+      name = element_group.name
+      @groups[name] = element_group
+    end
+
+    def group(name)
+      @groups[name]
     end
 
     def print
-      puts @collections
+      logger = Logger[:default]
+      logger.debug { @groups }
     end
   end
 end

@@ -1,6 +1,10 @@
+require 'xuanming/logger'
+
 module Xuanming
   class Application
     def initialize
+      Logger.new :default, STDOUT
+
       @config = Configuration.new
     end
 
@@ -26,6 +30,9 @@ module Xuanming
     def execute_command(sub_command, args)
       cmd = Extension.load_extension(Extensions::Command, sub_command).new
       cmd.execute(args, @config)
+    rescue => e
+      logger = Logger[:default]
+      logger.exception e
     end
   end
 end

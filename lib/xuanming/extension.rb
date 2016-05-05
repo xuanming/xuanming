@@ -20,7 +20,7 @@ module Xuanming
       end
 
       def all_extensions(ext_module)
-				ext_module.constants.select {|c| ext_module.const_get(c).is_a? Class}
+				ext_module.constants.select { |c| ext_module.const_get(c).is_a? Class }
       end
 
       def load_extension(ext_module, ext_name)

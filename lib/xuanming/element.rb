@@ -4,19 +4,28 @@ module Xuanming
     attr_accessor :id
 
     # original data
-    attr_accessor :storage_type
-    attr_accessor :data_types
+    attr_accessor :metadata
     attr_accessor :data
 
     def initialize(group, id)
       @group = group
       @id = id
 
-      @data_types = []
+      @ready = false
+
+      @metadata = { type: Set.new }
+    end
+
+    def unique_id
+      [@group, @id]
     end
 
     def checksum
       @data.hash
+    end
+
+    def ready?
+      @ready
     end
   end
 end

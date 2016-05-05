@@ -1,10 +1,13 @@
+require 'xuanming/logger'
+
 module Xuanming
   module Extensions
     module Command
 
       class Builder
         def execute(args, config)
-          puts 'in builder execute...'
+          logger = Logger[:default]
+          logger.debug { 'in builder execute...' }
 
           builder = Xuanming::Builder.new(config)
           builder.build

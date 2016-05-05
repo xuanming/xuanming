@@ -12,15 +12,15 @@ module Xuanming
         end
 
         def collect
-          ec = Xuanming::ElementCollection.new(@group)
+          ec = Xuanming::ElementGroup.new(@group)
 
           abs_dir = File.join(@env[:app_root], @option[:dir])
           Dir.glob(File.join(abs_dir, '**', '*')) do |f|
             if accept_file?(f)
               relative_path = Pathname.new(f).relative_path_from(Pathname.new(abs_dir)).to_s
               element = Xuanming::Element.new(@group, relative_path)
-              element.storage_type = :file
-              element.original_data = {abs_path: f}
+              element.metadata[:type] << :file
+              element.data = { abs_path: f }
               ec.add(element)
             end
           end
