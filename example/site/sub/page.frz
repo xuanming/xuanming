@@ -1,7 +1,0 @@
-Content:
-  Type: direct      # common option
-  RootPath: /pages  # common option
-  Source:
-    Dir: page
-    Extension: [html, erb, md, markdown, slim]
-  Theme: direct-bootstrap
