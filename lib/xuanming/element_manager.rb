@@ -1,25 +1,30 @@
 require 'xuanming/logger'
+require 'xuanming/dag'
 
 module Xuanming
   class ElementManager
     def initialize
-      @catagories = {}
+      @elements = []
+
+      @indexes = {}
+
+      @dag = DAG.new
 
       @endpoints = []
     end
 
-    def add(element_group)
+    def add(tuple, id, step)
       name = element_group.name
-      @catagories[name] = element_group
+      @tuples[name] = element_group
     end
 
     def group(name)
-      @catagories[name]
+      @tuples[name]
     end
 
     def print
       logger = Logger[:default]
-      logger.debug { @catagories }
+      logger.debug { @tuples }
     end
   end
 end

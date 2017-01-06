@@ -1,6 +1,6 @@
 module Xuanming
   module Extensions
-    module Main
+    module Tangram
 
       class Site
         def weave(em)
